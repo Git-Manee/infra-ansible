@@ -7,3 +7,8 @@
   ansible.builtin.systemd:
     name: prometheus
     state: restarted
+
+- name: Copy Prometheus Configuration - Record file
+  ansible.builtin.template:
+    src: record.yml
+    dest: /opt/prometheus/record.yml
