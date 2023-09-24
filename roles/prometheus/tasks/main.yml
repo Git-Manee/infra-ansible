@@ -13,6 +13,11 @@
     src: alerts.yml
     dest: /opt/prometheus/alerts.yml
 
+- name: Copy Alert Manager Config
+  ansible.builtin.template:
+    src: alertmanager.yml
+    dest: /opt/alertmanager/alertmanager.yml
+
 - name: Restart Prometheus
   ansible.builtin.systemd:
     name: prometheus
