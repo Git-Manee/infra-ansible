@@ -1,5 +1,5 @@
 groups:
-  - name: infra_ansible
+  - name: infra_alerts
     rules:
       - alert: ServerDownAlert
         expr: up == 0
